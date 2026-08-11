@@ -507,3 +507,308 @@ footer {
         padding: 30px 20px;
     }
 }
+
+/* =====================================================
+   SKILLS
+   ===================================================== */
+
+#skills {
+    min-height: 650px;
+    padding: 80px 6%;
+}
+
+.skills-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px 150px;
+
+    gap: 15px;
+}
+
+
+/* Technology Boxes */
+
+.skill-box {
+    background: #d0d0d0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+/* Soft Skills */
+
+.soft-skills {
+    display: flex;
+
+    align-content: center;
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 20px;
+}
+
+.soft-skills span {
+    background: #d0d0d0;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   SKILLS - MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    #skills {
+        padding: 60px 20px;
+    }
+
+    .skills-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .skill-box {
+        min-height: 120px;
+        font-size: 19px;
+    }
+
+    .soft-skills {
+        min-height: 180px;
+    }
+}
+
+/* =====================================================
+   PROJECTS
+   ===================================================== */
+
+#projects {
+    min-height: 750px;
+    padding: 80px 8%;
+    overflow: hidden;
+}
+
+.project-carousel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.project-track {
+    width: 100%;
+    max-width: 700px;
+
+    position: relative;
+}
+
+.project-card {
+    display: none;
+
+    background: #d0d0d0;
+
+    padding: 30px;
+
+    min-height: 420px;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.project-card.active {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    animation: projectFade 0.5s ease;
+}
+
+.project-image {
+    width: 100%;
+    height: 210px;
+
+    background: #bdbdbd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    font-size: 20px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    max-width: 500px;
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+}
+
+.project-btn {
+    text-decoration: none;
+
+    border: 1px solid #555;
+
+    padding: 8px 18px;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* ---------- Arrows ---------- */
+
+.project-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: 0.3s;
+}
+
+.project-arrow:hover {
+    opacity: 0.5;
+}
+
+.project-arrow.prev {
+    left: 5%;
+}
+
+.project-arrow.next {
+    right: 5%;
+}
+
+
+/* ---------- Dots ---------- */
+
+.project-dots {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    border: 2px solid #222;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #111;
+}
+
+
+/* ---------- Animation ---------- */
+
+@keyframes projectFade {
+
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    #projects {
+        padding: 60px 20px;
+    }
+
+    .project-track {
+        width: 90%;
+    }
+
+    .project-card {
+        min-height: 400px;
+        padding: 20px;
+    }
+
+    .project-image {
+        height: 170px;
+    }
+
+    .project-card h3 {
+        font-size: 20px;
+    }
+
+    .project-arrow {
+        font-size: 25px;
+    }
+
+    .project-arrow.prev {
+        left: 0;
+    }
+
+    .project-arrow.next {
+        right: 0;
+    }
+}
