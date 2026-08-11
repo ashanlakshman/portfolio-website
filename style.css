@@ -1,0 +1,509 @@
+/* =====================================================
+   PERSONAL PORTFOLIO WEBSITE
+   Main Stylesheet
+   ===================================================== */
+
+
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+    color: #111;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* ==================== NAVIGATION ==================== */
+
+header {
+    width: 100%;
+    padding: 20px 60px;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* =====================================================
+   HOME
+   ===================================================== */
+
+#home {
+    min-height: 900px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ---------- Geometric Animation ---------- */
+
+.geometric-animation {
+    width: 520px;
+    height: 220px;
+
+    border: 1px solid #222;
+    border-radius: 50%;
+
+    position: relative;
+
+    margin-bottom: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: floatShape 4s ease-in-out infinite;
+}
+
+.geometric-animation span {
+    position: absolute;
+    font-size: 18px;
+}
+
+.geometric-animation span:nth-child(1) {
+    transform: rotate(25deg) translateX(170px);
+}
+
+.geometric-animation span:nth-child(2) {
+    transform: rotate(145deg) translateX(170px);
+}
+
+.geometric-animation span:nth-child(3) {
+    transform: rotate(265deg) translateX(170px);
+}
+
+
+/* ---------- Home Text ---------- */
+
+.home-label {
+    font-size: 22px;
+    margin-bottom: 55px;
+}
+
+#home h1 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 65px;
+}
+
+#home h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 70px;
+}
+
+.explore-btn {
+    color: #111;
+    text-decoration: none;
+
+    font-size: 20px;
+
+    padding: 10px 20px;
+
+    transition: opacity 0.3s ease;
+}
+
+.explore-btn:hover {
+    opacity: 0.5;
+}
+
+
+/* ---------- Animation ---------- */
+
+@keyframes floatShape {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   COMMON SECTION HEADING
+   ===================================================== */
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   ABOUT
+   ===================================================== */
+
+#about {
+    min-height: 700px;
+    padding: 80px 8%;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.6fr 1fr;
+    grid-template-rows: 180px 140px;
+
+    gap: 15px;
+}
+
+
+/* Photo */
+
+.about-photo {
+    grid-row: 1 / 3;
+
+    background: #d0d0d0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Introduction */
+
+.about-intro {
+    grid-column: 2 / 4;
+
+    background: #d0d0d0;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-intro h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+
+/* Small Cards */
+
+.about-card {
+    background: #d0d0d0;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-card h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   EDUCATION
+   ===================================================== */
+
+#education {
+    min-height: 500px;
+    padding: 80px 8%;
+}
+
+.education-card {
+    background: #d0d0d0;
+
+    padding: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 4px;
+}
+
+.education-card h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.education-card span {
+    padding: 8px 15px;
+
+    border: 1px solid #888;
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   OTHER SECTIONS - BASIC FOUNDATION
+   ===================================================== */
+
+#skills,
+#projects,
+#experience,
+#contact {
+    min-height: 700px;
+    padding: 80px 8%;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding: 40px;
+
+    text-align: center;
+
+    background: #e5e5e5;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    .geometric-animation {
+        width: 450px;
+        height: 190px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .about-photo {
+        grid-row: auto;
+        min-height: 250px;
+    }
+
+    .about-intro {
+        grid-column: 1 / 3;
+        min-height: 180px;
+    }
+
+    .about-card {
+        min-height: 140px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* Home */
+
+    #home {
+        min-height: 750px;
+        padding: 50px 20px;
+    }
+
+    .geometric-animation {
+        width: 300px;
+        height: 140px;
+        margin-bottom: 35px;
+    }
+
+    .geometric-animation span {
+        font-size: 14px;
+    }
+
+    .geometric-animation span:nth-child(1) {
+        transform: rotate(25deg) translateX(100px);
+    }
+
+    .geometric-animation span:nth-child(2) {
+        transform: rotate(145deg) translateX(100px);
+    }
+
+    .geometric-animation span:nth-child(3) {
+        transform: rotate(265deg) translateX(100px);
+    }
+
+    .home-label {
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+
+    #home h1 {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    #home h2 {
+        font-size: 22px;
+        margin-bottom: 45px;
+    }
+
+    .explore-btn {
+        font-size: 17px;
+    }
+
+
+    /* Sections */
+
+    #about,
+    #education,
+    #skills,
+    #projects,
+    #experience,
+    #contact {
+        padding: 60px 20px;
+    }
+
+
+    /* About */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .about-photo {
+        grid-row: auto;
+        min-height: 280px;
+    }
+
+    .about-intro {
+        grid-column: auto;
+        min-height: 180px;
+        padding: 25px;
+    }
+
+    .about-card {
+        min-height: 130px;
+    }
+
+
+    /* Education */
+
+    .education-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .education-card h3 {
+        font-size: 19px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 30px 20px;
+    }
+}
